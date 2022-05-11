@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project for block 8",
   "main": "index.js",
-  "scripts": {
+    "scripts": {
     "test": "jest",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
   },

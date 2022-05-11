@@ -38,3 +38,5 @@ describe('1 - Implemente a função `average`', () => {
     expect(average([])).toBeUndefined();
   });
 });
+
+// Filha d* p* ela gosta de bala, ela gosta de lança, ela gosta de bala.
