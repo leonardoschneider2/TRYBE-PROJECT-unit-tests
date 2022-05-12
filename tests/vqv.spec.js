@@ -10,7 +10,7 @@ const vqv = require('../src/vqv.js');
   Comportamento:
     vqv(Tunico, 30) // Retorna:
       'Oi, meu nome é Tunico!
-      Tenho 30 anos,
+      Tenho 30 anos, 
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 
