@@ -12,7 +12,7 @@ const average = require('../src/average');
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined;
+    - average([1, '2']) // Retorno: undefined; 
 */
 
 describe('1 - Implemente a função `average`', () => {
@@ -39,4 +39,3 @@ describe('1 - Implemente a função `average`', () => {
   });
 });
 
-// Filha d* p* ela gosta de bala, ela gosta de lança, ela gosta de bala.
