@@ -93,6 +93,61 @@
 // - retornará o valor somado acrescido de 10%.
 // DICA: para isso, você precisará percorrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const restaurant = {};
+
+const orderFromMenu = (request) => restaurant.consumption.push(request);
+
+const somaTotalDasBebidas = () => {
+  let valorBebidas = 0;
+  const { drink } = restaurant.fetchMenu();
+  const request = restaurant.consumption;
+  request.forEach((item) => {
+    if (typeof drink[item] === 'number') {
+      valorBebidas += drink[item];
+    }
+  });
+  return valorBebidas;
+};
+
+const somaTotalDasComidas = () => {
+  let valorComidas = 0;
+  const { food } = restaurant.fetchMenu();
+  const request = restaurant.consumption;
+  request.forEach((item) => {
+    if (typeof food[item] === 'number') {
+      valorComidas += food[item];
+    }
+  });
+  return valorComidas;
+};
+
+const somaDosPreçosDosPedidos = () => {
+  let valorTotal = 0;
+  
+  valorTotal += somaTotalDasBebidas();
+  valorTotal += somaTotalDasComidas();
+  valorTotal += valorTotal * 0.1;
+
+  return valorTotal;
+};
+
+const createMenu = (objeto) => {
+  restaurant.fetchMenu = () => objeto;
+  restaurant.consumption = [];
+  restaurant.order = orderFromMenu;
+  restaurant.pay = somaDosPreçosDosPedidos;
+  return restaurant;
+};
+
+const objetoQualquer = { // { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
+  food: {
+    coxinha: 3.90,
+    sopa: 9.90,
+  },
+  drink: {
+    agua: 3.90,
+    cerveja: 6.90,
+  },
+};
 
 module.exports = createMenu;
